@@ -39,8 +39,13 @@
           <li>
             <a href="#products">Novidades</a>
           </li>
+          <li>
+            <a href="#order">Pedido</a>
+          </li>
         </ul>
-        <a href="#" class="btn btn-default">Contatar</a>
+        <a href="#" class="btn btn-default">
+          <i class="fa-solid fa-envelope"></i> Contatar
+        </a>
       </nav>
     </header>
 
@@ -187,6 +192,74 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- ORDER -->
+      <section id="order">
+        <h2 class="title">Faça seu pedido</h2>
+
+        <form class="order-form" id="order-form">
+          <div class="order-field order-field-full">
+            <label for="order-name">
+              <i class="fa-solid fa-user"></i> Nome
+            </label>
+            <input
+              type="text"
+              id="order-name"
+              name="name"
+              placeholder="Seu nome"
+              required
+            />
+          </div>
+
+          <div class="order-field order-field-full">
+            <label for="order-product">
+              <i class="fa-solid fa-mug-hot"></i> Produto
+            </label>
+            <select id="order-product" name="product">
+              <option value="Frappuccino Avelã">Frappuccino Avelã</option>
+              <option value="Frappuccino Pistache">Frappuccino Pistache</option>
+              <option value="Frappuccino Morango">Frappuccino Morango</option>
+              <option value="Moccha Chocolate">Moccha Chocolate</option>
+              <option value="Moccha Morango">Moccha Morango</option>
+              <option value="Moccha Café">Moccha Café</option>
+              <option value="Moccha Manga">Moccha Manga</option>
+            </select>
+          </div>
+
+          <div class="order-field">
+            <label for="order-size">
+              <i class="fa-solid fa-arrow-up-wide-short"></i> Tamanho
+            </label>
+            <select id="order-size" name="size">
+              <option value="Pequeno">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+            </select>
+          </div>
+
+          <div class="order-field">
+            <label for="order-quantity">
+              <i class="fa-solid fa-hashtag"></i> Quantidade
+            </label>
+            <input
+              type="number"
+              id="order-quantity"
+              name="quantity"
+              min="1"
+              value="1"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-default">
+            <i class="fa-solid fa-cart-plus"></i> Adicionar ao pedido
+          </button>
+        </form>
+
+        <ul class="order-list" id="order-list"></ul>
+        <p class="order-empty" id="order-empty">
+          Seu pedido ainda está vazio.
+        </p>
       </section>
     </main>
 
